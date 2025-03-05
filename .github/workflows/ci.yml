@@ -1,0 +1,42 @@
+name: CI - Maven Build and Allure Report
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+            java-version: '17'
+            distribution: 'oracle'
+            architecture: x64
+            cache: 'maven'
+
+      - name: Install Google Chrome
+        run: |
+            sudo apt-get update
+            sudo apt-get install -y wget
+            wget -q https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+            sudo apt-get install -y ./google-chrome-stable_current_amd64.deb
+
+      - name: Check Google Chrome Version
+        run: google-chrome --version
+
+      - name: Check ChromeDriver Version
+        run: chromedriver --version
+
+
+      - name: Build with Maven
+        run:  mvn clean test
+
+
