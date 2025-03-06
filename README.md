@@ -1,7 +1,8 @@
 # Projeto Serve Rest
 
-Este projeto automatiza o processo de cadastro de usuário, login e cadastro de produtos para uma plataforma de gerenciamento de vendas.
+Este projeto automatiza o cadastro de usuários, o processo de login e o registro de produtos em uma plataforma de gerenciamento de vendas. A automação segue o padrão Page Objects em conjunto com Fluent Page, garantindo um código mais modular, 
 
+- Site utilizado: https://front.serverest.dev/admin/home
 
 ## Estrutura do Projeto
 
