@@ -16,7 +16,7 @@ public class AguardarElemento {
     }
 
     public WebElement aguardarElemento(By locator) {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(100));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(300));
         return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
     }
 }
