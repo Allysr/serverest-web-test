@@ -46,7 +46,6 @@ public class GerenciamentoDriver {
                 WebDriverManager.chromedriver().setup();
                 ChromeOptions chromeOptions = new ChromeOptions();
                 chromeOptions.addArguments("--headless");
-                chromeOptions.addArguments("--window-size(1366, 768");
                 driver = new ChromeDriver(chromeOptions);
                 break;
 
