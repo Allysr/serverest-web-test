@@ -27,7 +27,6 @@ public class LoginTest extends BaseTest {
         String nome = "Ana";
         String email = gerarEmail(nome);
         String senha = "123456";
-        String mensagemBoasVindas = "Bem Vindo " + nome;
 
         cadastrarUsuarioPage
                 .clicarBotaoCadastrar()
