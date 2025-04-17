@@ -46,6 +46,7 @@ public class GerenciamentoDriver {
                 WebDriverManager.chromedriver().setup();
                 ChromeOptions chromeOptions = new ChromeOptions();
                 chromeOptions.addArguments("--headless");
+                chromeOptions.addArguments("--start-maximized");
                 driver = new ChromeDriver(chromeOptions);
                 break;
 
